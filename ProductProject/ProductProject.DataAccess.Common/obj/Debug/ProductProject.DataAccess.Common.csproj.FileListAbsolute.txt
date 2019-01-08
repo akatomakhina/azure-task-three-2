@@ -1,0 +1,5 @@
+C:\Users\Anastasiya_Katamakhi\Source\Repos\ProductProject\ProductProject.DataAccess.Common\bin\Debug\ProductProject.DataAccess.Common.dll
+C:\Users\Anastasiya_Katamakhi\Source\Repos\ProductProject\ProductProject.DataAccess.Common\bin\Debug\ProductProject.DataAccess.Common.pdb
+C:\Users\Anastasiya_Katamakhi\Source\Repos\ProductProject\ProductProject.DataAccess.Common\obj\Debug\ProductProject.DataAccess.Common.csproj.CoreCompileInputs.cache
+C:\Users\Anastasiya_Katamakhi\Source\Repos\ProductProject\ProductProject.DataAccess.Common\obj\Debug\ProductProject.DataAccess.Common.dll
+C:\Users\Anastasiya_Katamakhi\Source\Repos\ProductProject\ProductProject.DataAccess.Common\obj\Debug\ProductProject.DataAccess.Common.pdb

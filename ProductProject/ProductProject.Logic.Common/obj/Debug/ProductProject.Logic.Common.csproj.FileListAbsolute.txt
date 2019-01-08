@@ -1,0 +1,9 @@
+C:\Users\Anastasiya_Katamakhi\Source\Repos\ProductProject\ProductProject.Logic.Common\bin\Debug\ProductProject.Logic.Common.dll
+C:\Users\Anastasiya_Katamakhi\Source\Repos\ProductProject\ProductProject.Logic.Common\bin\Debug\ProductProject.Logic.Common.pdb
+C:\Users\Anastasiya_Katamakhi\Source\Repos\ProductProject\ProductProject.Logic.Common\bin\Debug\ProductProject.DataAccess.Common.dll
+C:\Users\Anastasiya_Katamakhi\Source\Repos\ProductProject\ProductProject.Logic.Common\bin\Debug\ProductProject.DataAccess.Common.pdb
+C:\Users\Anastasiya_Katamakhi\Source\Repos\ProductProject\ProductProject.Logic.Common\obj\Debug\ProductProject.Logic.Common.csprojAssemblyReference.cache
+C:\Users\Anastasiya_Katamakhi\Source\Repos\ProductProject\ProductProject.Logic.Common\obj\Debug\ProductProject.Logic.Common.csproj.CoreCompileInputs.cache
+C:\Users\Anastasiya_Katamakhi\Source\Repos\ProductProject\ProductProject.Logic.Common\obj\Debug\ProductProject.Logic.Common.csproj.CopyComplete
+C:\Users\Anastasiya_Katamakhi\Source\Repos\ProductProject\ProductProject.Logic.Common\obj\Debug\ProductProject.Logic.Common.dll
+C:\Users\Anastasiya_Katamakhi\Source\Repos\ProductProject\ProductProject.Logic.Common\obj\Debug\ProductProject.Logic.Common.pdb
