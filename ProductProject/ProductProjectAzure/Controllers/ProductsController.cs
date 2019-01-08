@@ -19,7 +19,7 @@ using Swashbuckle.Swagger.Annotations;
 
 namespace ProductProjectAzure.Controllers
 {
-    [RoutePrefix("api/AzureTask/products")]
+    [RoutePrefix("api/AzureTask")]
     [ProductsExceptionFilterAttribute]
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ProductsController : ApiController
@@ -58,7 +58,7 @@ namespace ProductProjectAzure.Controllers
 
 
         [HttpGet]
-        [Route("")]
+        [Route("products")]
         [SwaggerResponse(HttpStatusCode.Created, Description = "Get all products.", Type = typeof(int))]
         [SwaggerResponse(HttpStatusCode.BadRequest)]
         [SwaggerResponse(HttpStatusCode.InternalServerError)]
@@ -128,7 +128,7 @@ namespace ProductProjectAzure.Controllers
 
 
         [HttpDelete]
-        [Route("{id:int}")]
+        [Route("products/{id:int}")]
         [SwaggerResponse(HttpStatusCode.NoContent, Description = "Deletes an existing product.")]
         [SwaggerResponse(HttpStatusCode.NotFound, Description = "Product not found.")]
         [SwaggerResponse(HttpStatusCode.InternalServerError, Description = "Server error.")]

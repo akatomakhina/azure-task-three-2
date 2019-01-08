@@ -246,7 +246,9 @@
     <Compile Include="App_Start\InjectorConfig.cs" />
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="CustomFilters\FileUploadOperationFilter.cs" />
     <Compile Include="CustomFilters\ProductsExceptionFilterAttribute.cs" />
     <Compile Include="ErrorHandler\AiHandleErrorAttribute.cs" />
     <Compile Include="Global.asax.cs">
