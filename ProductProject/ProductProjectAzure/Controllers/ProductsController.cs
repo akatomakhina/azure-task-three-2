@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -8,8 +9,11 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Http.Cors;
 using log4net;
+using log4net.Appender;
+using log4net.Core;
 using ProductProject.Logic.Common.Models;
 using ProductProject.Logic.Common.Services;
+using ProductProject.Logic.Services;
 using ProductProjectAzure.CustomFilters;
 using Swashbuckle.Swagger.Annotations;
 
@@ -22,6 +26,11 @@ namespace ProductProjectAzure.Controllers
     {
         private readonly IProductService _productService;
         private readonly ILog _logger;
+
+        private static readonly ILog log =
+            LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
+        private static AzureTableAppender appender;
 
         public ProductsController(IProductService productService, ILog logger)
         {
@@ -37,6 +46,14 @@ namespace ProductProjectAzure.Controllers
 
             _productService = productService;
             _logger = logger;
+            ActivateAppender();
+        }
+
+        [HttpGet]
+        [Route("test")]
+        public string Test()
+        {
+            return "TEST";
         }
 
 
@@ -133,6 +150,37 @@ namespace ProductProjectAzure.Controllers
 
             _logger.Info("Product deleted");
             return ResponseMessage(Request.CreateResponse(HttpStatusCode.NoContent));
+        }
+
+        private void ActivateAppender()
+        {
+            appender = new AzureTableAppender
+            {
+                ConnectionString = ConfigurationManager.AppSettings["AzureConnectionString"],
+                TableName = ConfigurationManager.AppSettings["AzureTableName"],
+                BufferSize = 1
+            };
+
+            appender.ActivateOptions();
+            appender.DoAppend(MakeEvent());
+        }
+
+        private static LoggingEvent MakeEvent()
+        {
+            return new LoggingEvent(
+                new LoggingEventData
+                {
+                    Domain = "MainDomain",
+                    Identity = "UserIdentity",
+                    Level = Level.Critical,
+                    LoggerName = "AzureTableAppender",
+                    Message = "It's work!",
+                    TimeStamp = DateTime.UtcNow,
+                    UserName = "Nastya",
+                    ThreadName = "testThreadName",
+                    LocationInfo = new LocationInfo("className", "methodName", "fileName", "lineNumber")
+                }
+            );
         }
     }
 }
