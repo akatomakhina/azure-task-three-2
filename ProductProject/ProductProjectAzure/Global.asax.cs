@@ -14,7 +14,6 @@ namespace ProductProjectAzure
         protected void Application_Start()
         {
             App_Start.InjectorConfig.Configure(GlobalConfiguration.Configuration);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);
             GlobalConfiguration.Configure(WebApiConfig.Register);
         }
     }
